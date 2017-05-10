@@ -1,0 +1,7 @@
+subprojects {
+    group = 'test.transitive-deps'
+    version = '1.0-SNAPSHOT'
+    repositories {
+        jcenter()
+    }
+}

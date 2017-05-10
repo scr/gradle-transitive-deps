@@ -1,0 +1,8 @@
+apply plugin: 'java-library'
+apply plugin: 'maven'
+
+dependencies {
+    api 'org.slf4j:slf4j-api:1.7.24'
+
+    implementation 'org.slf4j:slf4j-simple:1.7.24'
+}

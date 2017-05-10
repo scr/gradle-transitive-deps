@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':publisher1')
+}
+
+task checkSlf4jSimple {
+    doLast {
+        def runtimeClasspathFiles = configurations.runtimeClasspath.resolve()
+        assert !runtimeClasspathFiles.grep {
+            !it.name.startsWith('slf4j-simple')
+        }
+    }
+}
+check.dependsOn checkSlf4jSimple
